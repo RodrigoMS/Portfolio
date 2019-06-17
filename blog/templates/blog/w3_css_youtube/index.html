@@ -1,0 +1,468 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" href="{% static 'w3_css_youtube/_imagens/logo.png' %}">
+    <title>YouTube Movies</title>
+
+    <link rel="stylesheet" href="{% static 'w3_css_youtube/_css/w3.css' %}">
+    <link type="text/css" rel="stylesheet" href="{% static 'w3_css_youtube/_css/estilo.css' %}">
+
+    <style>
+      body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+      .w3-third img{margin-bottom: -6px; opacity: 0.8; cursor: pointer}
+      .w3-third img:hover{opacity: 1}
+    </style>
+
+  </head>
+
+  <body class="w3-light-grey w3-content" style="max-width:1600px" id="pagina" onscroll="verificarPosicao()">
+
+    <!-- Menu lateral -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:300px;font-weight:bold; background-image: url(/static/w3_css_youtube/_imagens/hero_lightgray.jpg);" id="menu"><br>
+      <h3 class="w3-padding-64 w3-center"></h3>
+      <img src="/static/w3_css_youtube/_imagens/youtube-logo.png" class="w3-image w3-padding-large" alt="YouTube">
+      <br><br>
+
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-hide-large w3-transparent">CLOSE</a>
+      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-transparent">FILMES</a> 
+      <a href="#premium" onclick="w3_close()" class="w3-bar-item w3-button w3-transparent">PREMIUM</a> 
+      <a href="#social" onclick="w3_close()" class="w3-bar-item w3-button w3-transparent">REDE SOCIAL</a> 
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-transparent">CONTATO</a>
+      <div id="pixels"></div>
+
+    </nav>
+
+    <!-- Menu superior para telas pequenas -->
+    <header class="w3-container w3-top w3-hide-large w3-white w3-xlarge w3-padding-16">
+      <img src="/static/w3_css_youtube/_imagens/youtube-logo.png" class=" w3-left w3-image" alt="YouTube" style="width: 20%">
+      <a href="javascript:void(0)" class="w3-right w3-button w3-white" onclick="w3_open()">☰</a>
+    </header>
+
+    <!-- Efeito de sobreposição ao abrir a barra lateral em telas pequenas -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="feche o menu lateral" id="sobreposicao"></div>
+
+    <!-- Conteúdo da página -->
+    <div class="w3-main" id="conteudo" style="margin-left:300px">
+
+      <!-- Redimenciona o conteúdo em telas pequenas --> 
+      <div class="w3-hide-large" style="margin-top:83px"></div>
+
+
+      <!-- *************************************************-->
+      <!--         Catalogo de filmes - páginação 1         -->
+      <!-- *************************************************-->
+      <section class="w3-row w3-animate-right" id="filmes1">
+
+        <!-- Coluna 1 -->
+        <div class="w3-third">
+          <img src="/static/w3_css_youtube/_imagens/megatubarao.jpg" style="width:100%" name="https://www.youtube.com/embed/g0LIrUyApnM?autoplay=1" onclick="onClick(this, this.name)" alt="Um submarino de águas profundas, com uma equipe de pesquisa internacional, fica preso no fundo do Oceano Pacífico depois de ser atacado por um enorme tubarão que acreditavam previamente estar extinto. Correndo contra o tempo, o mergulhador de resgate especialista em águas profundas Jonas Taylor (Jason Statham) é convocado por um visionário oceanógrafo chinês (Winston Chao) para salvar a tripulação - e o próprio oceano - desta ameaça incontrolável: um tubarão pré-histórico com 23 metros de comprimento, conhecido como o Megalodon. O que ninguém poderia imaginar é que, anos antes, Taylor havia encontrado essa mesma criatura aterrorizante. Agora ele precisa arriscar a própria vida para salvar todos que estão presos no fundo do mar... E isso o traz frente a frente, mais uma vez, com o maior predador de todos os tempos!">
+
+
+          <img src="/static/w3_css_youtube/_imagens/circuloDeFogo.jpg" style="width:100%" name="https://www.youtube.com/embed/WKc_T4xxJgI?autoplay=1" onclick="onClick(this, this.name)" alt="John Boyega (série Star Wars) é o rebelde Jake Pentecost, um promissor piloto Jaeger, cujo lendário pai deu a própria vida para garantir a vitória da humanidade contra os monstruosos “Kaiju.” Agora uma ameaça alienígena ainda mais assustadora surgiu no mundo e Jake foi chamado de volta à ação, por seu ex-copiloto, Lambert (Scott Eastwood), e uma hacker Jaeger, de 15 anos, Amara (Cailee Spaeny). Criados para se tornar a mais poderosa força de defesa a andar sobre a terra, eles vivem uma nova e espetacular aventura, de proporções monumentais. - ( Título Original - Pacific Rim Uprising )">
+        
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="w3-third">
+
+          <img src="/static/w3_css_youtube/_imagens/nutcracker.jpg" style="width:100%" name="https://www.youtube.com/embed/vR4RWh4CFoE?autoplay=1" onclick="onClick(this, this.name)" alt="Clara (Mackenzie Foy), jovem esperta e independente, perde a única chave mágica capaz de abrir um presente de valor incalculável dado por seu padrinho (Morgan Freeman). Safa na solução de problemas, ela decide então iniciar uma jornada de resgate que a leva pelo Reino dos Doces, o Reino das Neves, o Reino das Flores e o sinistro Quarto Reino.">
+
+
+          <img src="/static/w3_css_youtube/_imagens/mentesSombrias.jpg" style="width:100%" name="https://www.youtube.com/embed/wZXvfspBtn8?autoplay=1" onclick="onClick(this, this.name)" alt="Após adolescentes que desenvolveram novas habilidades misteriosas serem declarados uma ameaça e detidos pelo governo, Ruby, uma das mais poderosas (Amandla Stenberg), escapa e se junta a um grupo de adolescentes fugitivos. Mas logo esses novos aliados percebem que precisam organizar uma resistência contra aqueles que os traíram. Um filme de aventura dos produtores de Stranger Things.">
+
+        </div>
+        
+        <!-- Coluna 3 -->
+        <div class="w3-third">
+          <img src="/static/w3_css_youtube/_imagens/jurassic.jpg" style="width:100%" name="https://www.youtube.com/embed/U0cBCghxIwQ?autoplay=1" onclick="onClick(this, this.name)" alt="Três anos se passaram desde que o parque temático e luxuoso resort Jurassic World foi destruído pelos dinossauros que escaparam do confinamento. A Ilha Nublar foi abandonada pelos humanos e os dinossauros que ficaram tentam sobreviver por si mesmos nas matas. Quando um vulcão inativo começa a entrar em erupção, Owen (Chris Pratt) e Claire (Bryce Dallas Howard) montam uma expedição para resgatar os dinossauros sobreviventes da extinção definitiva. - ( Título Original - Jurassic World: Fallen Kingdom )">
+
+
+          <img src="/static/w3_css_youtube/_imagens/jogador1.jpg" style="width:100%" name="https://www.youtube.com/embed/ooXxaPRP1iU?autoplay=1" onclick="onClick(this, this.name)" alt="Do cineasta Steven Spielberg, vem a aventura de ação de ficção científica, “Ready Player One”, baseada no best-seller de mesmo nome de Ernest Cline, que se tornou fenômeno mundial.">
+
+        </div>
+
+      </section>
+
+
+      <!-- *************************************************-->
+      <!--         Catalogo de filmes - páginação 2         -->
+      <!-- *************************************************-->
+      <section class="w3-row w3-animate-right" id="filmes2" style="display: none;">
+
+        <!-- Coluna 1 -->
+        <div class="w3-third">
+
+          <img src="/static/w3_css_youtube/_imagens/vingadores.jpg" style="width:100%" name="https://www.youtube.com/embed/cgNs0UiFLTc?autoplay=1" onclick="onClick(this, this.name)" alt="Thanos (Josh Brolin) enfim chega à Terra, disposto a reunir as Joias do Infinito. Para enfrentá-lo, os Vingadores precisam unir forças com os Guardiões da Galáxia, ao mesmo tempo em que lidam com desavenças entre alguns de seus integrantes.">
+
+
+          <img src="/static/w3_css_youtube/_imagens/missaoImpossivel.jpg" style="width:100%" name="https://www.youtube.com/embed/uDt383MH-EQ?autoplay=1" onclick="onClick(this, this.name)" alt="Em uma perigosa tarefa para recuperar plutônio roubado, Ethan Hunt (Tom Cruise) opta por salvar sua equipe ao invés de completar a missão, fazendo com que armas nucleares caiam nas mãos de agentes altamente qualificados de uma rede mortal que deseja destruir a civilização. Agora, com o mundo em risco, Ethan e sua equipe da IMF (Simon Pegg, Ving Rhames, Rebecca Ferguson) são forçados, relutantemente, a se aliar a um obstinado agente da CIA (Henry Cavill), enquanto correm contra o tempo para impedir a dissipação nuclear. Nunca houve uma ameaça tão destrutiva, façanhas tão impressionantes ou uma missão tão impossível!">
+        
+        </div>
+
+        <!-- Coluna 2 -->
+        <div class="w3-third">
+
+          <img src="/static/w3_css_youtube/_imagens/incriveis.jpg" style="width:100%" name="https://www.youtube.com/embed/Gww0W-Lv-y4?autoplay=1" onclick="onClick(this, this.name)" alt="Quando Helena Pêra é chamada para voltar a lutar contra o crime como a super-heroína Mulher-Elástica, cabe ao seu marido, Roberto, a tarefa de cuidar das crianças, especialmente o bebê Zezé. O que ele não esperava era que o caçula da família também tivesse superpoderes, que surgem sem qualquer controle.">
+
+
+          <img src="/static/w3_css_youtube/_imagens/oitoMulheres.jpg" style="width:100%" name="https://www.youtube.com/embed/WobcdEiXh5g?autoplay=1" onclick="onClick(this, this.name)" alt="Cinco anos, oito meses, 12 dias... em contagem regressiva. Este foi o tempo que Debbie Ocean (Sandra Bullock) levou para preparar o maior assalto da sua vida. Ela sabe que precisará de uma equipe com as melhores do métier, a começar pela sua parceira de crimes Lou Miller (Cate Blanchett). Juntas, elas recrutam um grupo de especialistas: a joalheira Amita (Mindy Kaling), a vigarista Constance (Awkwafina), a especialista em receptação Tammy (Sarah Paulson), a hacker Nine Ball (Rihanna) e a estilista Rose (Helena Bonham Carter). O alvo é US$ 150 milhões de dólares em diamantes... diamantes que estarão no pescoço da atriz mundialmente famosa Daphne Kluger (Anne Hathaway), na grande atração no evento do ano, o Met Gala. O plano é sólido como uma rocha, mas tudo precisará ser perfeito para a equipe conseguir entrar e escapar com os diamantes. Tudo absolutamente à vista.">
+
+        </div>
+        
+        <!-- Coluna 3 -->
+        <div class="w3-third">
+
+          <img src="/static/w3_css_youtube/_imagens/valerian.jpg" style="width:100%" name="https://www.youtube.com/embed/Mc7yRP-3c7I?autoplay=1" onclick="onClick(this, this.name)" alt="Valerian e a Cidade dos Mil Planetas é a espetacular nova aventura de Luc Besson, o lendário diretor de “O Profissional” (1994); “O Quinto Elemento” (1997) e “Lucy” (2014), baseada na inovadora HQ que inspirou uma geração de artistas, roteiristas, escritores e cineastas.No século 28, Valerian (Dane DeHaan) e Laureline (Cara Delevingne) são agentes intergalácticos encarregados de manter a ordem em todos os territórios humanos. Sob a ordem do Ministro da Defesa, os dois embarcam juntos em uma missão para a surpreendente cidade de Alpha – uma metrópole em constante expansão, onde espécies de todo o universo dirigem-se para compartilhar conhecimento, inteligência e cultura um com os outros.Mas há um mistério no centro da cidade, uma força maligna que ameaça a existência pacífica da Cidade dos Mil Planetas. Valerian e Laureline devem correr para identificar a ameaça e proteger não somente Alpha, mas o futuro de todo o universo.">
+
+
+          <img src="/static/w3_css_youtube/_imagens/sobrenatural.jpg" style="width:100%" name="https://www.youtube.com/embed/WmcsRgAngnE?autoplay=1" onclick="onClick(this, this.name)" alt="Neste quarto filme da franquia Sobrenatural, a doutora Elise Rainier (Lin Shaye) é chamada para resolver o caso de uma assombração no Novo México, localizada justamente na casa em que ela passou a infância.">
+
+        </div>
+
+      </section>
+
+
+
+      <!-- Paginação -->
+      <div class="w3-center w3-padding-32">
+        <div class="w3-bar">
+          <a href="#" onclick="paginaAnterior()" class="w3-bar-item w3-button w3-hover-black">«</a>
+          <a href="#" onclick="altPagimacao('1')" class="w3-bar-item w3-black w3-button" id="pag1">1</a>
+          <a href="#" onclick="altPagimacao('2')" class="w3-bar-item w3-button w3-hover-black" id=pag2>2</a>
+          <a href="#" onclick="paginaPosterior()" class="w3-bar-item w3-button w3-hover-black">»</a>
+        </div>
+      </div>
+      
+
+
+      <!-- Modal para exibir imformações sobre o video.-->
+      <section id="tela" class="w3-modal w3-black" style="padding-top:0" onclick="closeInformation()">
+        <span class="w3-button w3-black w3-xlarge w3-display-topright" onclick="closeInformation()">&times;</span>
+
+        <div class="w3-row w3-container w3-animate-zoom w3-padding-32 w3-transparent">
+
+          <div class="w3-container w3-third">
+            <img id="imgFilme" style="width:100%" class="w3-image"> 
+          </div>
+
+          <!-- Aqui irá carregar o video do youtube -->
+          <div id="container-video" class="w3-twothird"></div>
+
+          <p class="w3-margin-right w3-margin-left" id="caption" style="text-align: justify;"></p>
+            
+        </div>
+
+      </section>
+
+      <!-- Sobre a seção -->
+      <section class="w3-container w3-dark-grey w3-center w3-text-light-grey w3-padding-32" id="premium">
+        <img src="/static/w3_css_youtube/_imagens/YTPremium.png" alt="YouTube Premium" class="w3-image w3-padding-64" width="600" height="650">
+        <article class="w3-content w3-justify" style="max-width:600px">
+          <h4>YouTube e YouTube Music sem anúncios e acesso ao conteúdo do YouTube Originals</h4>
+          <p>Anteriormente conhecido como YouTube Red, o YouTube Premium oferece recursos no YouTube e no novo app YouTube Music, além de acesso a todas as séries e filmes do YouTube Originals.</p>
+          <p><img class="w3-circle w3-image w3-padding" src="/static/w3_css_youtube/_imagens/originals.jpg" alt="YouTube Originals" style="float: left; "> Os filmes e as séries originais do YouTube vão de dramas com artistas premiados a comédias com os principais criadores de conteúdo do YouTube e documentários sobre artistas multi-platina. Com o YouTube Premium, você tem acesso a todo o conteúdo original do YouTube Originals, disponível em vários dispositivos.</p>
+
+          <p><button class="w3-button w3-light-grey w3-padding-large w3-margin-top w3-margin-bottom" onclick="window.location.replace('https://www.youtube.com/channel/UCqVDpXKLmKeBU_yyt_QkItQ');">Ir para o YouTube Originals</button></p>
+
+          <hr class="w3-opacity">
+
+          <h4 class="w3-padding-16">Avaliação gratuita de 1 mês</h4>
+          <div class="w3-row-padding" style="margin:0 -16px">
+            <div class="w3-half w3-margin-bottom">
+              <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                <li class="w3-black w3-xlarge w3-padding-32">Plano padrão</li>
+                <li class="w3-padding-16">Vídeos sem anúncio</li>
+                <li class="w3-padding-16">Assista videos off-line</li>
+                <li class="w3-padding-16">Reprodução em segundo plano</li>
+                <li class="w3-padding-16">Filmes e séries</li>
+                <li class="w3-padding-16">---</li>
+                <li class="w3-padding-16">
+                  <h2>R$ 29,90</h2>
+                  <span class="w3-opacity">por mês</span>
+                </li>
+                <li class="w3-light-grey w3-padding-24">
+                  <button class="w3-button w3-white w3-hover-red w3-padding-large" onclick="window.location.replace('https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252Fpremium%253Fybp%253DOgIIAUoNCAYSCXVubGltaXRlZA%2525253D%2525253D%26action_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dpt&amp;passive=true&amp;service=youtube&amp;uilel=3&amp;hl=pt-BR');">Teste grátis</button>
+                </li>
+              </ul>
+            </div>
+            
+            <div class="w3-half">
+              <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
+                <li class="w3-black w3-xlarge w3-padding-32">Plano família</li>
+                <li class="w3-padding-16">Vídeos sem anúncio</li>
+                <li class="w3-padding-16">Assista videos off-line</li>
+                <li class="w3-padding-16">Reprodução em segundo plano</li>
+                <li class="w3-padding-16">Filmes e séries</li>
+                <li class="w3-padding-16">Até seis membros da família</li>
+                <li class="w3-padding-16">
+                  <h2>R$ 31,90</h2>
+                  <span class="w3-opacity">por mês</span>
+                </li>
+                <li class="w3-light-grey w3-padding-24">
+                  <button class="w3-button w3-white w3-hover-red w3-padding-large" onclick="window.location.replace('https://accounts.google.com/ServiceLogin?continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Fnext%3D%252Fpremium%253Fybp%253DOgIICEoNCAYSCXVubGltaXRlZA%2525253D%2525253D%26action_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Dpt&amp;passive=true&amp;service=youtube&amp;uilel=3&amp;hl=pt-BR');">Teste grátis</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <hr class="w3-opacity">
+                
+          <h4 id="social" class="w3-padding-16">YouTube como rede social</h4>
+
+          <p>De acordo com pesquisas da Pew Research Center em 2018 o YouTube lidera o ranking de empresas de mídia social nos países da america no norte. Mesmo que não seja uma plataforma tradicional, o site contém muitos elementos sociais que agradam os usuários.</p>
+
+          <!-- *************************************************-->
+          <!--          Grafico da pesquisa do YouTube          -->
+          <!-- *************************************************-->
+
+          <!-- Linha 1 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/youtube.png" alt="YouTube" style="padding-right:5px; ">YouTube</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:24%" id="g1">24%</div>
+          </div>
+
+          <!-- Linha 2 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/facebook.png" alt="Facebook" style="padding-right:5px; ">Facebook</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:22%" id="g2">22%</div>
+          </div>
+
+           <!-- Linha 3 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/instagram.png" alt="Instagram" style="padding-right:5px; ">Instagram</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:12%" id="g3">12%</div>
+          </div>
+
+           <!-- Linha 4 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/pinterest.png" alt="Pinterest" style="padding-right:5px; ">Pinterest</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:10%" id="g4">10%</div>
+          </div>
+
+          <!-- Linha 5 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/snapchat.png" alt="Snapchat" style="padding-right:5px; ">Snapchat</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:5%" id="g5">5%</div>
+          </div>
+
+          <!-- Linha 6 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/linkedin.png" alt="Linkedin" style="padding-right:5px; ">Linkedin</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:8%" id="g6">8%</div>
+          </div>
+
+          <!-- Linha 7 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/twiter.png" alt="Twiter" style="padding-right:5px; ">Twiter</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%" id="g7">8%</div>
+          </div>
+
+
+          <!-- Linha 8 -->
+          <p class="w3-wide"><img class="w3-image" src="/static/w3_css_youtube/_imagens/whatsapp.png" alt="Whatsapp" style="padding-right:5px; ">WhatsApp</p>
+          <div class="w3-white">
+            <div class="w3-container w3-padding-small w3-center w3-grey" style="width:95%" id="g8">7%</div>
+          </div>
+          
+        </article>
+      </section>
+
+      <!-- Seção de contato -->
+      <section class="w3-container w3-light-grey w3-padding-32 w3-padding-large" id="contact">
+        <div class="w3-content" style="max-width:600px">
+          <h4 class="w3-center"><b>Contato</b></h4>
+          <p>Gostou do conteudo?</p>
+          <p>Envie uma sugestão, dicas ou opinião para melhorar o nosso site.</p>
+          <form action="/action_page.php" target="_blank">
+            <div class="w3-section">
+              <label>Nome</label>
+              <input class="w3-input w3-border" type="text" name="Name" required>
+            </div>
+            <div class="w3-section">
+              <label>Email</label>
+              <input class="w3-input w3-border" type="text" name="Email" required>
+            </div>
+            <div class="w3-section">
+              <label>Mensagem</label>
+              <input class="w3-input w3-border" type="text" name="Message" required>
+            </div>
+            <button type="submit" class="w3-button w3-block w3-black w3-margin-bottom">Enviar</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Rodapé -->
+      <footer class="w3-container w3-padding-32 w3-grey">  
+        <div class="w3-row-padding">
+          <div class="w3-third">
+            <h3>INFORMAÇÃO</h3>
+            <p style="text-align: justify;">Este trabalho foi apresentado ao Instituto Federal de Educação, Ciência e Tecnologia de São Paulo, Campus Campos do Jordão como parte dos requisitos para a obtenção da aprovação na disciplina de Desenvolvimento Web I.</p>      
+          </div>
+        
+          <div class="w3-third">
+            <h3>RELACIONADOS</h3>
+            <ul class="w3-ul">
+
+            
+              <li class="w3-padding-16 w3-hover-black">
+                <a href="http://www.ifspcjo.edu.br/portal" style="text-decoration:none;" target="_blank">
+                  <img src="/static/w3_css_youtube/_imagens/ifsp.jpg" class="w3-left w3-margin-right" style="width:50px">
+                  <span class="w3-large">IFSP</span><br>
+                  <span>Campos do Jordão</span>
+                </a>
+              </li>
+            
+
+              <li class="w3-padding-16 w3-hover-black">
+                <a href="https://camposdojordao.com.br/" style="text-decoration:none;" target="_blank">
+                  <img src="/static/w3_css_youtube/_imagens/campos.jpg" class="w3-left w3-margin-right" style="width:50px">
+                  <span class="w3-large">CAMPOS DO JORDÃO</span><br>
+                  <span>Serra da Mantiqueira</span>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="w3-third w3-center">
+            <img src="/static/w3_css_youtube/_imagens/yt.gif" class="w3-image w3-padding-32">
+          </div>
+        </div>
+      </footer>
+      
+      <div class="w3-black w3-center w3-padding-24">
+        Trabalho Framework W3.css - 2018
+      </div>
+
+    </div>
+
+    <script>
+    // Script para abrir e fechar o menu lateral quando em telas menores.
+    function w3_open() {
+        document.getElementById("menu").style.display = "block";
+        document.getElementById("sobreposicao").style.display = "block";
+    }
+     
+    function w3_close() {
+        document.getElementById("menu").style.display = "none";
+        document.getElementById("sobreposicao").style.display = "none";
+    }
+
+    // Abre a janela de detalhes do filme.
+    function onClick(element, link) {
+      document.getElementById("imgFilme").src = element.src;
+      document.getElementById("tela").style.display = "block";
+      var captionText = document.getElementById("caption");
+      captionText.innerHTML = element.alt;
+
+      criarIframe(link);
+    }
+
+    // Cria o iframe com o link do trailer do filme. 
+    function criarIframe(link){
+      var video = document.createElement("iframe");
+      video.allowfullscreen = "1";
+      video.src = link;
+      video.scrolling = "no";
+      video.style.border = "none";
+      video.id = "video";
+
+      document.body.appendChild(video).height=(document.getElementById("imgFilme").height) + "px";
+      document.body.appendChild(video).width="99%";
+      document.getElementById("container-video").appendChild(video);
+    }
+
+    // Fecha a janela de detalhes do filme.
+    function closeInformation() {
+      document.getElementById("container-video").innerHTML = "";
+      document.getElementById("tela").style.display='none';
+    }
+
+    var catalogoCorrente = "1";
+
+    // Realiza a transição de um catalogo para outro na paginação.
+    function altPagimacao(catalogo) {
+
+      if (catalogoCorrente != catalogo) {
+
+        // Alterar o catalogo
+        document.getElementById("filmes"+catalogo).style.display = "block";
+        document.getElementById("filmes"+catalogoCorrente).style.display = "none";
+
+        // Altera as classes da paginação.
+        document.getElementById("pag"+catalogo).classList = "w3-bar-item w3-black w3-button";
+        document.getElementById("pag"+catalogoCorrente).classList = "w3-bar-item w3-button w3-hover-black";
+
+        catalogoCorrente = catalogo;
+      }
+
+    }
+
+    function paginaAnterior() {
+      if(catalogoCorrente != "1") {
+
+        altPagimacao(parseInt(catalogoCorrente)-1);
+
+      }
+    }
+
+    function paginaPosterior() {
+      if(catalogoCorrente != "2") {
+
+        altPagimacao(parseInt(catalogoCorrente)+1);
+
+      }
+    }
+
+    /* O dispa ocorre apenas uma vez quando o scroll cheda a 2050 px */
+    var disparo = 0;
+
+    /* Verifica a posição do scroll em pixels*/
+    function verificarPosicao() {
+        var elmnt = document.documentElement;
+        var y = elmnt.scrollTop;
+
+        if (y > 2050 && disparo == 0) {
+          apresentarGrafico('g1', 24);
+          apresentarGrafico('g2', 22);
+          apresentarGrafico('g3', 12);
+          apresentarGrafico('g4', 10);
+          apresentarGrafico('g5', 9);
+          apresentarGrafico('g6', 8);
+          apresentarGrafico('g7', 8);
+          apresentarGrafico('g8', 7);
+        } else if (y < 2050){
+          disparo = 0;
+        }
+
+    }
+
+
+    /* Realiza a animação do gráfico.*/
+    function apresentarGrafico(id, porcentagem) {
+      
+          var i = 0;
+          var animacao = setInterval(function(){
+            
+            document.getElementById(id).style.width = (i*4)+"%";
+            document.getElementById(id).innerHTML = i+"%";
+            ++i;
+            disparo = 1;
+
+            if (i > porcentagem) {
+              clearInterval(animacao);
+            }
+          }, 20);
+    }
+
+
+    </script>
+
+
+  </body>
+</html>

@@ -1,0 +1,130 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="{% static 'rmsbiker/_imagens/logo.png' %}">
+	<title>RMS bikes</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/estilo.css' %}"/>
+
+	<script src="{% static 'rmsbiker/_javascript/script.js' %}"></script>
+	<script src="{% static 'rmsbiker/_javascript/inicial.js' %}"></script>
+
+</head>
+<body onload="carregar()" onresize="carregar()">
+	<div id="interface">
+		<header id="cabecalho">
+			<hgroup id="logo">
+				<h1>RMS Bikes</h1>
+				<h2>Loja de reparo de Bicicletas</h2>
+			</hgroup>
+
+			<nav id="menu">		
+				<ul>
+
+					<li><a href="javascript: trocaPagina('');">INÍCIO</a></li> 
+					<li><a href="javascript: trocaPagina('sobre_nos');">SOBRE NÓS</a></li>
+					<li><a href="javascript: trocaPagina('produtos');">PRODUTOS</a></li>
+					<li><a href="javascript: trocaPagina('servicos');">SERVIÇOS</a></li>
+					<li><a href="javascript: trocaPagina('contato');">CONTATO</a></li>
+
+				</ul>
+			</nav>
+		</header>
+
+		<section class="esquerda">
+			<h2 class="textoOculto">Artigos sobre bicicletas</h2>
+			<article id="principal">
+				<header id="cabecalho-artigo">
+					<hgroup>
+						<h2>Como escolher sua primeira bike</h2>
+						<h3>por Indybike</h3>
+						<h4 class="textoDireita">9 DE OUTUBRO DE 2018</h4>
+					</hgroup>
+				</header>
+
+				<p>Saber o que você quer da bicicleta é passo mais importante para a escolha da sua companheira do asfalto ou das trilhas.</p>
+
+				<p>Entrar hoje em uma loja de bicicletas é como escolher o carro na concessionária. Tipos, modelos, tamanhos e acessórios existem aos montes e para todos os bolsos. A melhor bike, no entanto, deve ser aquela que mais se adequa à forma como você pretende usá-la. Além de ter um custo condizente com o seu bolso, até porque se a ideia é investir na sua primeira bike não é bom gastar aquela fortuna. Uma bicicleta ruim ou que não condiz com o uso que fará dela é o primeiro passo para você deixá-la encostada, acumulando poeira.</p>
+
+				<figure class="foto-legenda">
+					<img src="{% static 'rmsbiker/_imagens/bike1.png' %}">
+					<figcaption>
+						<h3>BICICLETA DE ESTRADA (SPEED)</h3>
+						<p>Rodas finas, menos atrito, mais velocidade.</p>
+					</figcaption>
+				</figure>
+
+				<h2>Saiba o que você quer para sua bicicleta</h2>
+				<p>A primeira escolha é a mais simples. Se o seu objetivo for treinar ou fazer uma atividade aeróbica complementar à musculação, você poderá optar pela mountain bike ou pela de estrada. A primeira é um curinga do ciclismo. Encara desafios em qualquer terreno e condição, até na cidade. Ela conta com uma coroa a mais na transmissão da corrente (o menor círculo da frente, de 22 dentes), que permite reduzir a força na pedalada, principalmente nas subidas. Já a de estrada potencializa a velocidade, priorizando o desempenho, e deve ser o foco de quem busca um treinamento regular e resistência aeróbica. Como o nome sugere, exige pisos nivelados como o asfalto.</p>
+
+				<p>Agora, se o propósito for apenas dar um giro nos fins de semana ou usá-la como meio de transporte na cidade, os modelos híbridos, as bicicletas urbanas, com geometria mais simples, bagageiro e guidão alto (que favorece o conforto), e mesmo as mountain bikes podem ser opções mais acertadas.</p>
+
+				<p>Ao definir o tipo de bicicleta, é importante analisar os seus componentes antes da compra. A qualidade e o equilíbrio entre elas variam muito, determinando o valor final do veículo, que pode variar mais de 200%. Quanto mais leves e resistentes, mais caras. A recomendação dos especialistas é: pense em gastar 10% a mais, nunca 10% a menos.</p>
+
+				<figure class="foto-legenda">
+					<img src="{% static 'rmsbiker/_imagens/bike2.png' %}">
+					<figcaption>
+						<h3>BICICLETA DE MONTANHA (MTB)</h3>
+						<p>Desempenho em trilhas, maior conforto.</p>
+					</figcaption>
+				</figure>
+
+				<h2>Sob medida</h2>
+
+				<p>Bicicletas grandes demais ou pequenas para o seu tamanho podem ser causa de dores e desconforto. Não adianta comprar uma bicicleta muito cara se ela for do tamanho errado. Perde-se rendimento e possíveis dores podem fazer você parar de pedalar. Por isso, muitas lojas especializadas oferecem o serviço de bike fit, ajuste da bicicleta ao tamanho do usuário. O tamanho correto do quadro, o ajuste da altura do selim, a distância do guidão, do pedivela e de outros componentes, além de prevenir lesões, aumentam o conforto e o prazer de pedalar. Confira alguns ajustes importantes:<p>
+
+				<h2>Guidão</h2>
+
+				<p>Baixo, ele favorece o rendimento (no caso de uma bike de estrada). No entanto, pode causar tensão na região lombar e no pescoço, tanto no trapézio quanto na cervical, além de sobrecarregar os tríceps. Alto, o guidão aumenta o conforto e também a resistência do corpo ao ar. Embora muitos usem o antebraço como medida entre o selim e o avanço (ou mesa), a prática é controversa. Alguns especialistas preferem usar o joelho como referência. Sentado na bike, com um dos joelhos à frente e apoiado no pedal (paralelo ao chão), a patela deve estar alinhada ao eixo do pedal. Já o guidão deve bloquear a visão do cubo (centro) da roda da frente, de forma a não causar uma hiperextensão no pescoço.<p>
+
+				<h2>Quadro</h2>
+
+				<p>O tamanho de uma bicicleta está relacionado diretamente ao seu quadro. Se muito curto, ele gera insegurança e desequilíbrio; se longo, pode ocasionar dor na região lombar. Para encontrar o tamanho certo de quadro, deve-se medir o “cavalo” do ciclista – que vai do início da região interna da coxa até o pé. Com essa medida, faça a seguinte conta:<p>
+
+				<ul>
+					<li>Em bike de estrada: multiplique a altura do cavalo por 0,65. O resultado é dado em centímetros.</li> 
+					<li>Em mountain bike: subtraia 10 cm da altura do cavalo e divida por 2,54 (uma polegada). O resultado é em polegadas. Selim</li>
+				</ul>
+
+				<p>É o banco da bicicleta. Quando muito alto, força a virilha e as panturrilhas, esticando o tendão calcâneo e dificultando a descida da bike. Se baixo, força demais a patela, os ligamentos e tendões e prejudica a potência da pedalada. Mantenha-o na altura da crista ilíaca da bacia. Quando sentado, a perna deve ficar estendida, mas relaxada, com o calcanhar apoiado no pedal. Para se certificar, pedale para trás nessa posição. Se o quadril se movimentar, é porque o selim ainda está alto.<p>
+
+				<br>
+			</article>
+		</section>
+
+		<aside class="direita" id="contRelacionado">
+			<h2 class="centro">Sobre o mundo da bike</h2>
+			<h3>Sistema Pedal Assistido - Sense</h3>
+			<p>Todas as bicicletas elétricas da Sense Bike utilizam esta tecnologia, que é amplamente usada e aprovada na Europa.  Prático, eficiente e seguro.</p>
+
+			<div id="video1"></div>
+
+			<h3>E o tamanho do quadro?</h3>
+			<p>Essa é uma das maiores dúvidas de quem vai comprar uma bike. Qual tamanho de quadro devo escolher? Muitos acreditam que saber apenas a altura do ciclista ou algumas outras medidas como o tamanho dos membros, tronco, cavalo, etc, garante a precisão na escolha do quadro ideal.</p>
+
+			<div id="video2"></div>
+
+			<h3>Copa do mundo XCO 2018 UCI- etapa Itália</h3>
+			<p>O feito histórico coroa uma incrível temporada para Avancini, atual número 2 do ranking da União Ciclística Internacional (UCI), e que terminou em 4º lugar no Campeonato Mundial de Mountain Bike de Cross-Country Olímpico (XCO), em Lenzerheide, na Suíça.Veja a ultima volta do mundial de ciclismo XCO na Itália.</p>
+
+			<div id="video3"></div>
+
+			<h3>Então você quer ser bem sucedido não é mesmo?</h3>
+			<p>Entre em ação! Você precisará trabalhar duro, se dedicar, marter a direção e seguir a metodologia correta. Então de qualquer forma você será um campeão!</p>
+
+			<div id="video4"></div>
+		</aside>
+
+		<footer>
+			<p>RMS Biker, Avenida Pasteur 520, Campos do Jordão, (012)3456-7890</p>
+			<p>&reg; Copyright 2018 - by Rodrigo&nbsp;Messias</p>
+		</footer>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="_imagens/logo.png">
+	<title>RMS Bikes</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/estilo.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/servicos.css' %}"/>
+
+	<script src="{% static 'rmsbiker/_javascript/script.js' %}"></script>
+
+</head>
+
+<body>
+	<div id="interface">
+		<header id="cabecalho">
+			<hgroup id="logo">
+				<h1>RMS Bikes</h1>
+				<h2>Loja de reparo de Bicicletas</h2>
+			</hgroup>
+
+			<nav id="menu">		
+				<ul>
+
+					<li><a href="javascript: trocaPagina('../');">INÍCIO</a></li> 
+					<li><a href="javascript: trocaPagina('../sobre_nos');">SOBRE NÓS</a></li>
+					<li><a href="javascript: trocaPagina('../produtos');">PRODUTOS</a></li>
+					<li><a href="javascript: trocaPagina('../servicos');">SERVIÇOS</a></li>
+					<li><a href="javascript: trocaPagina('../contato');">CONTATO</a></li>
+
+				</ul>
+			</nav>
+		</header>
+
+		<section class="esquerda" id="esquerda50">
+			<h2 class="textoOculto">Tabela de preços de manutenções</h2>
+			<article id="principal">
+				<header id="cabecalho-artigo">
+					<hgroup>
+						<h2>Tabela de manutenção</h2>
+						<h3 class="textoDireita">Atualizado em 28 nov 2018</h3>
+					</hgroup>
+				</header>
+
+				<div id="tabela">
+					<table>
+						<caption>Tabela de manutenções</caption>
+						<tr>
+							<th class="centro">Indicador</th>
+							<th>Serviço</th>
+							<th class="centro" >Preço</th>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">1</td>
+							<td>Montagem completa da bike</td>
+							<td>R$ 50,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">2</td>
+							<td>Centragem de Rodas</td>
+							<td>R$ 10,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">3</td>
+							<td>Montagem de Rodas</td>
+							<td>R$ 40,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">4</td>
+							<td>Regulagem de freios</td>
+							<td>R$ 5,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">5</td>
+							<td>Troca do movimento central</td>
+							<td>R$ 15,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">6</td>
+							<td>Troca do garfo ou suspensão</td>
+							<td>R$ 10,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">7</td>
+							<td>Troca do pneus</td>
+							<td>R$ 10,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">8</td>
+							<td>Troca da corrente</td>
+							<td>R$ 5,00</td>
+						</tr>
+
+						<tr>
+							<td class="textoCentro">9</td>
+							<td>Instalação de refletores</td>
+							<td>R$ 5,00</td>
+						</tr>
+					</table>
+				</div>
+			</article>
+			<br>
+		</section>
+
+		<aside id="direita50">
+			<br><br>
+			<figure class="foto-legenda">
+				<img src="/static/rmsbiker/_imagens/bikeManutencao.png" alt="Imagem de indicadores de manutenção">
+			</figure>
+		</aside>
+
+		<section class="resetFloat">
+			<h2 style="font-family: 'Raleway', sans-serif; color: #606060;">Serviço especial</h2>
+			<p>A RMS Bikes também trabalha com o serviço de Leva e Traz. O  serviço visa atender nossos clientes que não têm tempo ou meios para levar a sua bicicleta a nossa loja.</p>
+			<p>Entre  em contato conosco e agende. Este serviço tem o valor de R$ 30,00 (trinta reais), por viagem feita.</p>
+		</section>
+
+		<footer>
+			<p>RMS Biker, Avenida Pasteur 520, Campos do Jordão, (012)3456-7890</p>
+			<p>&reg; Copyright 2018 - by Rodrigo&nbsp;Messias</p>
+		</footer>
+	</div>
+</body>
+</html>

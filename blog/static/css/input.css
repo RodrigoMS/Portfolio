@@ -1,0 +1,43 @@
+﻿@charset "UTF-8";
+
+/* Entrar pela direita*/
+@-webkit-keyframes rightInput {
+	0% { width: 0px; }
+	100% { width: 250px; }
+}
+
+@-moz-keyframes rightInput {
+	0% { width: 0px; }
+	100% { width: 250px; }
+}
+
+@-o-keyframes rightInput {
+	0% { width: 0px; }
+	100% { width: 250px; }
+}
+
+@keyframes rightInput {
+	0% { width: 0px; }
+	100% { width: 250px; }
+}
+
+/* Sair pela direira*/
+@-webkit-keyframes leftInput {
+	0% { width: 250px; }
+	100% { width: 0px; }
+}
+
+@-moz-keyframes leftInput {
+	0% { width: 250px; }
+	100% { width: 0px; }
+}
+
+@-o-keyframes leftInput {
+	0% { width: 250px; }
+	100% { width: 0px; }
+}
+
+@keyframes leftInput {
+	0% { width: 250px; }
+	100% { width: 0px; }
+}

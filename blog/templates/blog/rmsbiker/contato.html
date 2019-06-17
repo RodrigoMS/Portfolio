@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="_imagens/logo.png">
+    <title>RMS Bikes</title>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/estilo.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/contato.css' %}"/>
+
+    <script src="{% static 'rmsbiker/_javascript/script.js' %}"></script>
+    <script src="{% static 'rmsbiker/_javascript/contato.js' %}"></script>
+
+</head>
+<body>
+    <div id="interface">
+        <header id="cabecalho">
+            <hgroup id="logo">
+                <h1>RMS Bikes</h1>
+                <h2>Loja de reparo de Bicicletas</h2>
+            </hgroup>
+
+            <nav id="menu">     
+
+                <ul>
+
+                    <li><a href="javascript: trocaPagina('../');">INÍCIO</a></li> 
+                    <li><a href="javascript: trocaPagina('../sobre_nos');">SOBRE NÓS</a></li>
+                    <li><a href="javascript: trocaPagina('../produtos');">PRODUTOS</a></li>
+                    <li><a href="javascript: trocaPagina('../servicos');">SERVIÇOS</a></li>
+                    <li><a href="javascript: trocaPagina('../contato');">CONTATO</a></li>
+
+                </ul>
+            </nav>
+        </header>
+        <section id="esquerda50">
+            <h2 class="centro" >Contato</h2>
+
+            <form action="index.html" method="GET">
+                <fieldset>
+
+                    <legend>Dados para contato</legend>
+
+                    <label for="nome">Nome:</label>
+                    <input type="text" class="formulario" id="nome" name="nome" placeholder=" Nome completo" maxlength="59" required>
+
+                    <br>
+
+                    <label for="telefone"> Telefone:</label>
+                    <input type="text" class="formulario" id="telefone" name="telefone" placeholder=" contendo 11 dígitos" minlength="11" maxlength="15" required>
+
+                    <br>
+
+                    <label for="email"> E-mail:</label>
+                    <input type="email" class="formulario" id="email" name="email" placeholder=" exemplo@exemplo.com" maxlength="79" required>
+
+                    <br>
+
+                    <label for="email"> Mensagem:</label>
+                    <textarea placeholder=" Deixe um comentário." name="sugestao"></textarea>
+
+                </fieldset>
+
+                <input type="submit" value="Enviar" name="enviar" id="cadastrar">
+            </form>
+        </section>
+
+        <aside id="direita50">
+            <div class="centralizar">
+                <h2>RMS Bikes</h2>
+                Avenida Pasteur 520<br>
+                 Campos do Jordão<br>
+                 (012)3456-7890
+            </div>
+        </aside>
+
+        <footer>
+            <p>RMS Biker, Avenida Pasteur 520, Campos do Jordão, (012)3456-7890</p>
+            <p>&reg; Copyright 2018 - by Rodrigo&nbsp;Messias</p>
+        </footer>
+    </div>
+</body>
+</html>

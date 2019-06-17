@@ -1,0 +1,39 @@
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+th {
+	background-color: #3c3a3a;
+    padding: 10px 5px;
+    color: white;
+}
+
+tr.cabecario {
+    font-weight: normal;
+    background-color: #2196f3;
+    color: #ffffff;
+}
+
+tr.cabecario:hover {
+    background-color: #2196f3;
+}
+
+tr:hover {
+    background-color: #999999;
+}
+
+td {
+    padding: 10px 10px;
+}
+
+.resetFloat{
+	clear: both;
+}
+
+div#tabela {
+	overflow-x:auto;
+}

@@ -1,0 +1,111 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RMS</title>
+
+	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/fade.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/input.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/rotateZoom.css' %}">
+
+	<script src="{% static 'js/script.js' %}"></script>
+
+</head>
+<body>
+	<header>
+		<hgroup>
+			<h1 class="background_blue">RODRIGO MESSIAS</h1>
+		</hgroup>
+
+		<nav>		
+			<ul>
+				<li><a href="javascript: changePage('../');">INÍCIO</a></li> 
+				<li><a href="javascript: changePage('blog');">BLOG</a></li>
+				<li><a href="javascript: changePage('biografia');">BIOGRAFIA</a></li>
+				<li><a href="javascript: changePage('contato');">CONTATO</a></li>
+			</ul>
+
+			<a href="javascript: menuOpenClose();" id="iconMenu">&#9776;</a>
+
+		</nav>
+	</header>
+
+	<aside>
+		<div>
+			<a href="javascript: menuOpenClose();" id="iconClose">&times;</a>
+
+			<br class="clear"/>
+
+			<ul>
+				<li><a href="javascript: changePage('../');">INÍCIO</a></li><br> 
+				<li><a href="javascript: changePage('blog');">BLOG</a></li><br>
+				<li><a href="javascript: changePage('biografia');">BIOGRAFIA</a></li><br>
+				<li><a href="javascript: changePage('contato');">CONTATO</a></li><br>
+			</ul>
+		</div>
+	</aside>
+
+	<br class="clear"/>
+
+	<!-- Seção de cursos -->
+	<section>
+		{% for frase in biografia %}
+			<div class="container1">
+				<h2 class="font_blue">{{ frase.title }}</h2>
+				<article>&nbsp;&nbsp;&nbsp;&nbsp;
+
+					{{ frase.text|linebreaksbr }}
+					
+				</article>
+			</div>
+		{% endfor %}
+
+		<div class="container1">
+			<h3>FORMAÇÃO ESCOLAR E CURSOS</h3>
+			<hr>
+		</div>
+
+		<div class="container1">
+
+			{% for formacao in formacaos %}
+				<div class="content2">
+					<h3 class="font_blue">{{ formacao.title }}</h3>
+					<h4>{{ formacao.period }}</h4>
+					<p>{{ formacao.text }}</p>
+					<p>{{ formacao.local }}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</section>
+
+	<!-- Seção de trabalhos -->
+	<section>
+		<div class="container1">
+			<h3>EXPERIÊNCIAS PROFISSIONAIS</h3>
+			<hr>
+		</div>
+
+		<div class="container1">
+
+			{% for profissao in profissaos %}
+				<div class="content4">
+					<h3 class="font_blue">{{ profissao.title }}</h3>
+					<h4>{{ profissao.period }}</h4>
+					<p>{{ profissao.text }}</p>
+					<p>{{ profissao.local }}</p>
+				</div>
+			{% endfor %}
+
+		</div>
+		<br><br>
+	</section>
+
+	<footer class="background_black text_center">
+		© 2019 Rodrigo M. S. | Todos os direitos reservados.
+	</footer>
+</body>
+</html>

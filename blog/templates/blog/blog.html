@@ -1,0 +1,18 @@
+{% extends 'blog/base.html'%}
+
+{% block content %}
+
+	<!-- Seção do blog -->
+	<section>
+		{% for post in posts %}
+			<div class="container1 text_justify">
+				<hr>
+	 			<p class="font_grey text_right">Publicação: {{ post.published_date }}</p>
+	 			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
+	        	<!--<h2 class="font_blue"></h2>-->
+	        	{{ post.text | safe }}
+	    	</div>
+		{% endfor %}
+	</section>
+	
+{% endblock %}

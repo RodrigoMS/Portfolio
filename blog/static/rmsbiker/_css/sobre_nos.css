@@ -1,0 +1,42 @@
+		
+img {
+	width: 270px;
+    -webkit-animation: fadeInOut 4s ease-in-out;
+    -moz-animation: fadeInOut 4s ease-in-out;
+    -o-animation: fadeInOut 4s ease-in-out;
+    animation: fadeInOut 4s ease-in-out;
+}
+
+section#esquerda {
+	margin: 6% 0px 6% 0px;
+	float: left;
+	width: 350px;
+	height: 310px;
+}
+
+section#direita {
+	margin: 10% 0px 10% 0px;
+	float: right flex;
+	flex-grow: 1;
+}
+
+
+/* Alterar a exibição da página quando a página estiver menor que 800px.*/
+@media only screen and (max-width: 800px) {
+	section#esquerda {
+		width: 100%;
+		height: auto;
+	}
+
+	section#direita {
+		clear: both;
+	}
+
+	figure {
+		display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+    	width: 270px;
+    	height: 270px;
+	}
+}

@@ -1,0 +1,81 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="{% static 'rmsbiker/_imagens/logo.png' %}">
+	<title>RMS Bikes</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/estilo.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/produtos.css' %}"/>
+
+	<script src="{% static 'rmsbiker/_javascript/script.js' %}"></script>
+	<script src="{% static 'rmsbiker/_javascript/produtos.js' %}"></script>
+
+</head>
+<body onload="carregarProdutos()">
+	<div id="interface">
+		<!-- Cabeçario -->
+		<header id="cabecalho">
+			<hgroup id="logo">
+				<h1>RMS Bikes</h1>
+				<h2>Loja de reparo de Bicicletas</h2>
+			</hgroup>
+
+			<nav id="menu">		
+				<ul>
+
+					<li><a href="javascript: trocaPagina('../');">INÍCIO</a></li> 
+					<li><a href="javascript: trocaPagina('../sobre_nos');">SOBRE NÓS</a></li>
+					<li><a href="javascript: trocaPagina('../produtos');">PRODUTOS</a></li>
+					<li><a href="javascript: trocaPagina('../servicos');">SERVIÇOS</a></li>
+					<li><a href="javascript: trocaPagina('../contato');">CONTATO</a></li>
+
+				</ul>
+			</nav>
+		</header>
+
+		<div id="tela" class="tela" onclick="fechar()">
+  			<span class="fechar" onclick="fechar()">&times;</span>
+  			<img class="imagem" id="imagem" src="#" alt="Foto produto">
+		</div>
+
+		<section class="esquerda">
+			<header id="cabecalho-artigo">
+				<hgroup>
+					<h2>Produtos</h2>
+					<h3>Aqui você encontra as melhores marcas nos menores preços.</h3>
+					<h4 class="textoDireita">Promoções validas até 29 de novembro de 2018</h4>
+				</hgroup>
+			</header>
+
+			<section id="produtos">
+				<h2 class="textoOculto"> Lista de produtos</h2>
+			</section>
+
+		</section>
+
+		<aside class="direita" id="lateral">
+		
+			<h2 class="centro">Promoção</h2>
+			<h3>Sistema Pedal Assistido -Sense</h3>
+			<p>Aniversariante tem desconto de 12% na revisão completa (mão de obra, peças e acessórios), no mês de aniversário. Cumulativo com desconto na forma de pagamento.</p>
+
+			<h3>Desafio de quilometragem Strava/Endomondo</h3>
+			<p>Pedalou 20km num sábado ou domingo nas ciclovias da Grande São Paulo? Compartilhe o resultado do Strava ou Endomondo em nosso Facebook e ganhe 20% de desconto na mão de obra de uma revisão (simples ou geral). Pedalou 50km? 50% de desconto. Pedalou 100km? Revisão grátis!! Restrito a uma revisão por mês, pessoal e intransferível.</p>
+
+			<h3>Descontos na forma de pagamento</h3>
+			<p>Para qualquer compra de mercadoria ou serviço, 7% com dinheiro ou transferência interbancária, e 5% com cartão de débito.</p>
+
+		</aside>
+
+		<footer>
+			<p>RMS Biker, Avenida Pasteur 520, Campos do Jordão, (012)3456-7890</p>
+			<p>&reg; Copyright 2018 - by Rodrigo&nbsp;Messias</p>
+		</footer>
+	</div>
+</body>
+</html>

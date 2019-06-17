@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RMS</title>
+
+	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/fade.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/input.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/rotateZoom.css' %}">
+
+	<script src="{% static 'js/script.js' %}"></script>
+
+</head>
+<body>
+	<header>
+		<hgroup>
+			<h1 class="background_blue">RODRIGO MESSIAS</h1>
+		</hgroup>
+
+		<nav>		
+			<ul>
+				<li><a href="javascript: changePage('../../');">INÍCIO</a></li> 
+				<li><a href="javascript: changePage('../../blog');">BLOG</a></li>
+				<li><a href="javascript: changePage('../../biografia');">BIOGRAFIA</a></li>
+				<li><a href="javascript: changePage('../../contato');">CONTATO</a></li>
+			</ul>
+
+			<a href="javascript: menuOpenClose();" id="iconMenu">&#9776;</a>
+
+		</nav>
+	</header>
+
+	<aside>
+		<div>
+			<a href="javascript: menuOpenClose();" id="iconClose">&times;</a>
+
+			<br class="clear"/>
+
+			<ul>
+				<li><a href="javascript: changePage('../');">INÍCIO</a></li><br> 
+				<li><a href="javascript: changePage('blog');">BLOG</a></li><br>
+				<li><a href="javascript: changePage('biografia');">BIOGRAFIA</a></li><br>
+				<li><a href="javascript: changePage('contato');">CONTATO</a></li><br>
+			</ul>
+		</div>
+	</aside>
+	</header>
+
+{% block content %}
+
+
+{% endblock %}
+
+	<footer class="background_black text_center">
+		© 2019 Rodrigo M. S. | Todos os direitos reservados.
+	</footer>
+</body>
+</html>

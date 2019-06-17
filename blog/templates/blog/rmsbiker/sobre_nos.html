@@ -1,0 +1,78 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="shortcut icon" href="_imagens/logo.png">
+	<title>RMS Bikes</title>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/estilo.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'rmsbiker/_css/sobre_nos.css' %}"/>
+
+	<script src="{% static 'rmsbiker/_javascript/script.js' %}"></script>
+	<script src="{% static 'rmsbiker/_javascript/sobre_nos.js' %}"></script>
+
+</head>
+<body>
+	<div id="interface">
+
+		<header id="cabecalho">
+			<hgroup id="logo">
+				<h1>RMS Bikes</h1>
+				<h2>Loja de reparo de Bicicletas</h2>
+			</hgroup>
+
+			<nav id="menu">		
+				<ul>
+
+					<li><a href="javascript: trocaPagina('../');">INÍCIO</a></li> 
+					<li><a href="javascript: trocaPagina('../sobre_nos');">SOBRE NÓS</a></li>
+					<li><a href="javascript: trocaPagina('../produtos');">PRODUTOS</a></li>
+					<li><a href="javascript: trocaPagina('../servicos');">SERVIÇOS</a></li>
+					<li><a href="javascript: trocaPagina('../contato');">CONTATO</a></li>
+
+				</ul>
+			</nav>
+		</header>
+		<section id="corpo-full">
+			<h2 class="textoOculto"> Oficina de bikes especializada.</h2>
+			<article id="principal">
+				<header id="cabecalho-artigo">
+					<hgroup>
+						<h2>Oficina especializada</h2>
+					</hgroup>
+				</header>
+
+				<section id="esquerda">
+				<h2 class="textoOculto"> Oficina de bicicletas especializada</h2>
+					<figure id="oficina">
+						<img id="imagem0" class="centro" src="{% static 'rmsbiker/_imagens/oficina0.jpg' %}" alt="A oficina" />
+					</figure>
+				</section>
+
+				<section id="direita">
+					<h2 class="textoOculto"> Descrição da oficina.</h2>
+				
+					<p>A oficinas oferece excelência para revisões, reparos, montagens e upgrades de bicicletas. Cuidamos da bicicleta de ciclista profissional, entusiasta e de pessoas comuns que gostam de pedalar.</p>
+
+					<p>A oficina é equipada com ferramentas de alta qualidade das marcas ParkTools, IceTools, SuperB e Unior. A equipe de mecânicos possuem ampla experiência e treinamento, e são capacitados a realizar revisões completas, reparos variados, instalação de upgrades, e ajustes de suspensão, câmbios e freios.</p>
+
+					<p>Além do robusto conhecimento e ampla experiência dos nossos mecânicos, adotamos múltiplos procedimentos de controle de qualidade na execução de serviços, de forma a alcançar e manter excelentes estatísticas de satisfação com nossos clientes.</p>
+
+					<p>Investimos também na constante atualização técnica e reciclagem do corpo de mecânicos, além de manter um banco de dados e manuais especializados para apoiar os mecânicos para otimizar os trabalhos de manutenção executados.</p>
+
+				</section>
+			</article>
+
+		</section>
+
+		<footer>
+			<p>RMS Biker, Avenida Pasteur 520, Campos do Jordão, (012)3456-7890</p>
+			<p>&reg; Copyright 2018 - by Rodrigo&nbsp;Messias</p>
+		</footer>
+	</div>
+</body>
+</html>

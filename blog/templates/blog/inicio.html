@@ -1,0 +1,139 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RMS</title>
+
+	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/fade.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/input.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/rotateZoom.css' %}">
+
+	<script src="{% static 'js/script.js' %}"></script>
+
+</head>
+<body>
+	<header style="background-image: url('/static/imagens/RMS1.png');">
+		<hgroup>
+			<h1 class="background_blue">RODRIGO MESSIAS</h1>
+			<span>DESENVOLVEDOR WEB</span>
+		</hgroup>
+
+		<nav>		
+			<ul>
+				<li><a href="javascript: changePage('');">INÍCIO</a></li> 
+				<li><a href="javascript: changePage('blog');">BLOG</a></li>
+				<li><a href="javascript: changePage('biografia');">BIOGRAFIA</a></li>
+				<li><a href="javascript: changePage('contato');">CONTATO</a></li>
+			</ul>
+
+			<a href="javascript: menuOpenClose();" id="iconMenu">&#9776;</a>
+
+		</nav>
+	</header>
+
+	<aside>
+		<div>
+			<a href="javascript: menuOpenClose();" id="iconClose">&times;</a>
+
+			<br class="clear"/>
+
+			<ul>
+				<li><a href="javascript: changePage('');">INÍCIO</a></li><br> 
+				<li><a href="javascript: changePage('blog');">BLOG</a></li><br>
+				<li><a href="javascript: changePage('biografia');">BIOGRAFIA</a></li><br>
+				<li><a href="javascript: changePage('contato');">CONTATO</a></li><br>
+			</ul>
+		</div>
+	</aside>
+
+	<br class="clear"/>
+
+	<!-- Seção de informações pessoais -->
+	<section>
+		<h1 class="font_blue">SOBRE MIM</h1>
+
+		<!--<article id="introduction">
+			Rodrigo Messias, formando em Analise e Desenvolvimento de Sistemas pelo Instituto Federal de Ciência e Tecnologia de São Paulo, sou desenvolvedor e trabalho com sistemas web, websites e desenhos artísticos.
+		</article>-->
+
+		<div class="container0">
+			{% for contato in contatos %}
+				<div class="content0">
+					<span>Nome</span>
+				</div>
+
+				<div class="content1">
+					<span class="font_bolder">{{contato.name}}</span>
+				</div>
+
+				<div class="content0">
+					<span>E-Mail</span>
+				</div>
+
+				<div class="content1">
+					<span class="font_bolder">{{contato.email}}</span>
+				</div>
+			{% endfor %}
+		</div>
+
+		<br><br>
+
+		<a href="javascript: changePage('contato');" class="background_blue center text_center buttonLink">MAIS INFORMAÇÕES</a>
+
+		<br>
+
+	</section>
+
+	<!-- Seção de habilidades -->
+	<section class="background_black">
+		<h1 class="font_white" >VOCÊ SONHA, EU TORNO REAL</h1>
+
+		<div class="container1">
+			<h2 class="font_blue">HABILIDADES</h2>
+		</div>
+
+		<div class="container1">
+			{% for post in posts %}
+				<div class="container1">
+					<hr>
+		 			<p class="font_grey text_right">Publicação: {{ post.published_date }}</p>
+		        	<h2 class="font_blue">{{ post.title }}</h2>
+		        	<p class="text_justify ">{{ post.text|linebreaksbr }}</p>
+		    	</div>
+			{% endfor %}
+
+			{% for habilidade in habilidades %}
+				<div class="content2">
+					<h3 class="font_blue">{{ habilidade.title }}</h3>
+					<p>{{ habilidade.text|linebreaksbr }}</p>
+				</div>
+			{% endfor %}
+
+		</div>
+	</section>
+
+	<section>
+		<div class="container1">
+			<div class="content3">
+				<h1 class="font_blue">PORTFOLIO</h1>
+				<p>O objetivo é sempre criar melhores experiências, oferecendo um trabalho de qualidade ao usuário.</p>
+			</div>
+
+			{% for projeto in projetos %}
+				<div class="content3 rotateZoom" onclick="rotateZoom(this, '#ebebeb', '{{ projeto.link }}');">
+					<img src="{{ projeto.image }}" alt="{{ projeto.title }}" style="width: calc(100% - 20px); height: auto;">
+				</div>
+			{% endfor %}
+			
+		</div>
+	</section>
+
+	<footer class="background_black text_center">
+		© 2019 Rodrigo M. S. | Todos os direitos reservados.
+	</footer>
+</body>
+</html>

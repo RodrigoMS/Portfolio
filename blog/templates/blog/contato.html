@@ -1,0 +1,114 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>RMS</title>
+
+	<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/fade.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/input.css' %}">
+	<link type="text/css" rel="stylesheet" href="{% static 'css/rotateZoom.css' %}">
+
+	<script src="{% static 'js/script.js' %}"></script>
+
+</head>
+<body>
+	<header > <!--style="background-image: url('/static/imagens/RMS1.png');">-->
+		<hgroup>
+			<h1 class="background_blue">RODRIGO MESSIAS</h1>
+		</hgroup>
+
+		<nav>		
+			<ul>
+				<li><a href="javascript: changePage('../');">INÍCIO</a></li> 
+				<li><a href="javascript: changePage('blog');">BLOG</a></li>
+				<li><a href="javascript: changePage('biografia');">BIOGRAFIA</a></li>
+				<li><a href="javascript: changePage('contato');">CONTATO</a></li>
+			</ul>
+
+			<a href="javascript: menuOpenClose();" id="iconMenu">&#9776;</a>
+
+		</nav>
+	</header>
+
+	<aside>
+		<div>
+			<a href="javascript: menuOpenClose();" id="iconClose">&times;</a>
+
+			<br class="clear"/>
+
+			<ul>
+				<li><a href="javascript: changePage('../');">INÍCIO</a></li><br> 
+				<li><a href="javascript: changePage('blog');">BLOG</a></li><br>
+				<li><a href="javascript: changePage('biografia');">BIOGRAFIA</a></li><br>
+				<li><a href="javascript: changePage('contato');">CONTATO</a></li><br>
+			</ul>
+		</div>
+	</aside>
+
+	<br class="clear"/>
+
+	<!-- Seção de informações pessoais -->
+	<section>
+		<h1 class="font_blue">CONTATO</h1>
+
+		<div class="container0">
+			{% for contato in contatos %}
+
+				<div class="content0">
+					<span>Nome</span>
+				</div>
+
+				<div class="content1">
+					<span class="font_bolder">{{contato.name}}</span>
+				</div>
+
+				<div class="content0">
+					<span>Telefone</span>
+				</div>
+
+				<div class="content1">
+					<span class="font_bolder">{{contato.telephone}}</span>
+				</div>
+
+				<div class="content0">
+					<span>E-Mail</span>
+				</div>
+
+				<div class="content1">
+					<span class="font_bolder">{{contato.email}}</span>
+				</div>
+
+
+				<div class="content0">
+					<span>Cidade</span>
+				</div>
+
+				<div class="content1">
+					<span class="font_bolder">{{contato.city}}</span>
+				</div>
+
+
+				<div class="content0">
+					<span>País</span>
+				</div>
+
+				<div class="content1">
+					<span class="font_bolder">{{contato.country}}</span>
+				</div>
+
+			{% endfor %}
+		</div>
+
+		<br><br>
+
+	</section>
+
+	<footer class="background_black text_center">
+		© 2019 Rodrigo M. S. | Todos os direitos reservados.
+	</footer>
+</body>
+</html>

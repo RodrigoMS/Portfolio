@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+
+/* Adição de fonte. */
+
+@font-face {
+	font-family:'Raleway';
+	src: url("../_fonts/Raleway-Regular.ttf");
+}
+
+body {
+	background-image: url(../_imagens/fundo1.jpg);
+	font-family: sans-serif,Arial;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-color: #dddddd;
+	color: rgba(0,0,0,1);
+}
+
+div#interface {
+	width: 94%;
+	background-color: rgba(255,255,255,0.8);
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	padding: 10px;
+
+	/* Aplica animação */
+	-webkit-animation: fadeIn 2s ease-in-out; /* Safari */
+    -moz-animation: fadeIn 2s ease-in-out; /* Firefox */
+    -o-animation: fadeIn 2s ease-in-out; /* IE */
+    animation: fadeIn 2s ease-in-out;
+}
+
+p {
+	text-align: justify;
+	text-indent: 50px;
+}
+
+a {
+	color: #606060;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+header#cabecalho {
+	height: 150px;
+}
+
+header#cabecalho h1 {
+	font-family:'Raleway', sans-serif;
+	font-size: 30pt;
+	color: #606060;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.6);
+	padding: 0px;
+	margin-bottom: 0px;
+}
+
+header#cabecalho h2 {
+	font-family: 'Titillium Web', sans-serif;
+	font-size: 15pt;
+	color: #888888;
+	margin-top: 0px;
+}
+
+hgroup#logo {
+	float: left;
+	width: 230px;
+}
+
+hgroup#logo h2{
+	font-size: 11pt;
+}
+
+
+/* Formatação de imagens com legendas*/
+
+figure.foto-legenda {
+	position: relative;
+}
+
+figure.foto-legenda img {
+	width: 100%;
+	height: 100%;
+}
+
+figure.foto-legenda figcaption {
+	opacity: 0;
+	position: absolute;
+	top: 0px;
+	color: #3c3a3a;
+	text-shadow: 1px 1px #ffffff;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	transition: opacity 1s;
+}
+
+figure.foto-legenda:hover figcaption{
+	opacity: 1;
+}
+
+/* Formatação do menu */
+
+nav#menu {
+	float: right;
+}
+
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	top: -20px;
+	left: 500px;
+}
+
+nav#menu li {
+	display: inline-block;
+	padding: 10px;
+	margin: 2px;
+}
+
+nav#menu li:hover{
+	text-decoration: underline;
+}
+
+nav#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+section.esquerda {
+	display: block;
+	width: calc(60% - 15px);
+	float: left;
+	padding-right: 15px;
+}
+
+section#esquerda50 {
+	width: calc(50% - 15px);
+	padding-right: 15px;
+	display: block;
+	float: left;
+}
+
+aside.direita {
+	display: block;
+	width: calc(40% - 30px);
+	float: left;
+	background-color: #dddddd;
+	padding: 15px;
+	margin-top: 10px;
+	box-shadow: 2px 2px 2px 2px rgba(0,0,0,.5)
+}
+
+aside#direita50 {
+	width: calc(50% - 15px);
+	padding-right: 15px;
+	display: block;
+	float: left;
+}
+
+aside.direita h2 {
+	font-family: 'Raleway', sans-serif; 
+	font-size:  20pt;
+	color: #606060;
+	margin-top: 0px;
+}
+
+aside.direita h3 {
+	background-color: #606060;
+	font-size: 13pt;
+	color: #ffffff;
+	padding: 5px;
+}
+
+/*Formatação de todos os títulos principais.*/
+article#principal h2{
+	font-size:  13pt;
+	color: #606060;
+	padding: 5px 0px 5px 0px;
+	margin: 10px;
+}
+
+.textoDireita {
+	text-align: right;
+}
+
+.textoCentro {
+	text-align: center;
+}
+
+.textoOculto {
+	display: none;
+}
+
+header#cabecalho-artigo h2{
+	font-family: 'Raleway', sans-serif;
+	font-size: 20pt;
+	color: #606060;
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+header#cabecalho-artigo h3{
+	font-size: 13pt;
+	color: #606060;
+}
+
+header#cabecalho-artigo h4{
+	font-size: 12pt;
+	color: #606060;
+}
+
+footer{
+	clear: both;
+	border-top: 1px solid #606060;
+}
+
+footer p{
+	text-align: center;
+}
+
+/* Alterar a exibição da página quando a página estiver menor que 800px.*/
+@media only screen and (max-width: 800px) {
+	section.esquerda{
+		width: 100%;
+		clear: both;
+	}
+
+	aside.direita{
+		width: calc(100% - 30px);
+		clear: both;
+	}
+
+	section#esquerda50 {
+		width: calc(100% - 5px);
+		clear: both;
+	}
+
+	aside#direita50{
+		width: calc(100% - 5px);
+		clear: both;
+	}
+}
+
+
+/*Transição da opacidade dos elementos*/
+
+/*Ao entrar altera a opacidade.*/
+@-webkit-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+	0% { opacity: 0;}
+	100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+/*Ao sair altera a opacidade.*/
+@-webkit-keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-o-keyframes fadeOut {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes fadeout {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+/*Ao entrar altera a opacidade
+  e retorna para o esta do anterior. */
+@-webkit-keyframes fadeInOut {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+
+@-moz-keyframes  fadeInOut {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-o-keyframes  fadeInOut {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes  fadeInOut {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}
